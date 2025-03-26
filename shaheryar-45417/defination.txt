@@ -1,0 +1,23 @@
+Definition: Polymorphism is a fundamental concept in object-oriented programming (OOP) that allows objects to be treated as instances of their parent class rather than their actual class. The term means "many forms," highlighting its ability to provide multiple implementations for a single interface or method.
+
+Key Types:
+
+Compile-time Polymorphism (Method Overloading):
+
+Achieved through method overloading or operator overloading.
+
+Example: A method named add() can be used to add integers, floats, or concatenate strings based on input.
+
+Runtime Polymorphism (Method Overriding):
+
+Achieved through inheritance and method overriding.
+
+Example: A parent class might have a method draw(), and child classes like Circle or Square provide their specific implementations of the draw() method.
+
+Benefits:
+
+Promotes code reusability and flexibility.
+
+Supports extensibility, making it easier to add new functionality.
+
+Simplifies code readability through abstraction.
