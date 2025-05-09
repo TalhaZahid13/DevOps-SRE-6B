@@ -1,0 +1,33 @@
+name: Deploy Simple HTML to GitHub Pages
+
+on:
+  push:
+    branches: [ MuhammadUmer_27182 ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v0.4
+        with:
+          root: '.'  # or 'public' if your HTML is inside the public folder
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload static HTML
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.'  # or 'public' if that's where your HTML lives
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
